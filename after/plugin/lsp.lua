@@ -1,15 +1,5 @@
 local lsp = require('lsp-zero')
 
--- lsp.setup({
--- 	settings = {
--- 		Lua = {
--- 			diagnostics = {
--- 				globals = { 'vim' }
--- 			}
--- 		}
--- 	}
--- })
-
 lsp.preset('recommended')
 
 lsp.ensure_installed({
@@ -51,3 +41,12 @@ end)
 
 lsp.setup()
 
+require'lspconfig'.sumneko_lua.setup {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+}
