@@ -1,5 +1,7 @@
 -- vim.opt.guicursor = ""
 
+vim.opt.showmode = false
+
 vim.opt.nu = true
 vim.opt.rnu = true
 
