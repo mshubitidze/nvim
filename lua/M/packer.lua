@@ -11,14 +11,6 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-		end,
-	})
-
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
 	use("nvim-treesitter/playground")
@@ -62,5 +54,29 @@ return require("packer").startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 
-    use 'brenoprata10/nvim-highlight-colors'
+	use("brenoprata10/nvim-highlight-colors")
+
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+
+	use("tpope/vim-commentary")
+
+	use("kylechui/nvim-surround")
+
+	use({
+		"rose-pine/neovim",
+		as = "rose-pine",
+		config = function()
+			vim.cmd("colorscheme rose-pine")
+		end,
+	})
+
+	use("EdenEast/nightfox.nvim")
+
+	use("ellisonleao/gruvbox.nvim")
+
+	use("bluz71/vim-nightfly-colors")
+
+	use("folke/tokyonight.nvim")
+
+	use({ "catppuccin/nvim", as = "catppuccin" })
 end)
