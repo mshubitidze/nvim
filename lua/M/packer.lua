@@ -11,6 +11,8 @@ return require("packer").startup(function(use)
         requires = { { "nvim-lua/plenary.nvim" } },
     })
 
+    use "kyazdani42/nvim-web-devicons"
+
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
     use("nvim-treesitter/playground")
@@ -49,6 +51,8 @@ return require("packer").startup(function(use)
 
     use("github/copilot.vim")
 
+    use "1478zhcy/lualine-copilot"
+
     use({
         "nvim-lualine/lualine.nvim",
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
@@ -61,6 +65,8 @@ return require("packer").startup(function(use)
     use("tpope/vim-commentary")
 
     use("kylechui/nvim-surround")
+
+    use "lukas-reineke/indent-blankline.nvim"
 
     use({
         "rose-pine/neovim",

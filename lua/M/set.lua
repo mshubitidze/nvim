@@ -28,6 +28,10 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
+
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
