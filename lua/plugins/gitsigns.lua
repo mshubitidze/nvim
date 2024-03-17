@@ -55,14 +55,14 @@ return {
         map('n', '<leader>hb', function()
           gs.blame_line { full = true }
         end, { desc = 'Blame line' })
-        map('n', '<leader>tb', gs.toggle_current_line_blame)
-        map('n', '<leader>hd', gs.diffthis)
+        map('n', '<leader>tb', gs.toggle_current_line_blame, { desc = 'Toggle blame line' })
+        map('n', '<leader>hd', gs.diffthis, { desc = 'Diff with this' })
         map('n', '<leader>hD', function()
           gs.diffthis '~'
         end, { desc = 'Diff with last commit' })
         map('n', '<leader>td', gs.toggle_deleted, { desc = 'Toggle deleted' })
 
-        map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+        map({ 'o', 'x' }, 'ih', ':<C-U>Gitsigns select_hunk<CR>', { desc = 'Select hunk' })
       end,
     }
   end,
