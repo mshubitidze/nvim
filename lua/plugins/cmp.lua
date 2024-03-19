@@ -10,13 +10,20 @@ return {
         end
         return 'make install_jsregexp'
       end)(),
+      dependencies = {
+        -- TODO: https://github.com/rafamadriz/friendly-snippets
+        {
+          'rafamadriz/friendly-snippets',
+          config = function()
+            require('luasnip.loaders.from_vscode').lazy_load()
+          end,
+        },
+      },
     },
     'saadparwaiz1/cmp_luasnip',
 
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
-
-    -- 'rafamadriz/friendly-snippets',
   },
   config = function()
     local cmp = require 'cmp'
@@ -34,6 +41,9 @@ return {
       mapping = cmp.mapping.preset.insert {
         ['<C-n>'] = cmp.mapping.select_next_item(),
         ['<C-p>'] = cmp.mapping.select_prev_item(),
+
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
 
         ['<C-y>'] = cmp.mapping.confirm { select = true },
 

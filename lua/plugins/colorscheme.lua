@@ -1,10 +1,9 @@
 return {
   -- {
   --   'catppuccin/nvim',
-  --   lazy = false,
   --   name = 'catppuccin',
   --   priority = 1000,
-  --   config = function()
+  --   init = function()
   --     require('catppuccin').setup {
   --       flavour = 'mocha',
   --       color_overrides = {
@@ -27,9 +26,8 @@ return {
   -- },
   {
     'EdenEast/nightfox.nvim',
-    lazy = false,
     priority = 1000,
-    config = function()
+    init = function()
       require('nightfox').setup {
         palettes = {
           duskfox = {
